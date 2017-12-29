@@ -121,6 +121,11 @@
       <div id=multiple-return>" (rum/render-html (multiple-return/ulist (multiple-return/multiple-return))) "</div>
     </div>
 
+    <div class=example>
+      <div class=example-title>React Fragment</div>
+      <div id=fragment></div>
+    </div>
+
     <script src='target/main.js' type='text/javascript'></script>
   </body>
 </html>"))
