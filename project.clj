@@ -7,9 +7,9 @@
   :dependencies
   [[org.clojure/clojure        "1.8.0"   :scope "provided"]
    [org.clojure/clojurescript  "1.9.946" :scope "provided"]
-   [cljsjs/react               "16.0.0-0"]
-   [cljsjs/react-dom           "16.0.0-0"]
-   [sablono                    "0.8.1"]]
+   [cljsjs/react               "16.2.0-3"]
+   [cljsjs/react-dom           "16.2.0-3"]
+   [sablono                    "0.8.2-SNAPSHOT"]]
   
   :plugins [ [lein-cljsbuild "1.1.7"] ]
 

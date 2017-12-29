@@ -2,17 +2,19 @@
   (:require
     [rum.core :as rum]
     [rum.examples.core :as core]
-    [rum.examples.timer-reactive :as timer-reactive]
-    [rum.examples.timer-static   :as timer-static]
-    [rum.examples.controls       :as controls]
-    [rum.examples.binary-clock   :as binary-clock]
-    [rum.examples.board-reactive :as board-reactive]
-    [rum.examples.bmi-calculator :as bmi-calculator]
-    [rum.examples.inputs         :as inputs]
-    [rum.examples.refs           :as refs]
-    [rum.examples.local-state    :as local-state]
-    [rum.examples.keys           :as keys]
-    [rum.examples.self-reference :as self-reference]))
+    [rum.examples.timer-reactive  :as timer-reactive]
+    [rum.examples.timer-static    :as timer-static]
+    [rum.examples.controls        :as controls]
+    [rum.examples.binary-clock    :as binary-clock]
+    [rum.examples.board-reactive  :as board-reactive]
+    [rum.examples.bmi-calculator  :as bmi-calculator]
+    [rum.examples.inputs          :as inputs]
+    [rum.examples.refs            :as refs]
+    [rum.examples.local-state     :as local-state]
+    [rum.examples.keys            :as keys]
+    [rum.examples.self-reference  :as self-reference]
+    [rum.examples.multiple-return :as multiple-return]
+    [rum.examples.error-boundary  :as error-boundary]))
 
 (def page (str
 "<!doctype html>
@@ -115,7 +117,21 @@
       <div id=custom-props></div>
     </div>
 
-    
+    <div class=example>
+      <div class=example-title>Multiple return</div>
+      <div id=multiple-return>" (rum/render-html (multiple-return/ulist (multiple-return/multiple-return))) "</div>
+    </div>
+
+    <div class=example>
+      <div class=example-title>React Fragment</div>
+      <div id=fragment></div>
+    </div>
+
+    <div class=example>
+      <div class=example-title>Error boundary</div>
+      <div id=error-boundary>" (rum/render-html (error-boundary/error-boundary (error-boundary/faulty-component))) "</div>
+    </div>
+
     <script src='target/main.js' type='text/javascript'></script>
   </body>
 </html>"))
