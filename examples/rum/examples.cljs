@@ -19,7 +19,8 @@
     [rum.examples.context :as context]
     [rum.examples.custom-props :as custom-props]
     [rum.examples.multiple-return :as multiple-return]
-    [rum.examples.fragment :as fragment]))
+    [rum.examples.fragment :as fragment]
+    [rum.examples.error-boundary :as error-boundary]))
 
 
 (enable-console-print!)
@@ -42,8 +43,8 @@
 (context/mount!         (core/el "context"))
 (custom-props/mount!    (core/el "custom-props"))
 (multiple-return/mount! (core/el "multiple-return"))
-(fragment/mount!        (core/el "fragment"))
-
+;(fragment/mount!        (core/el "fragment"))
+(error-boundary/mount!  (core/el "error-boundary"))
 
 ;; Start clock ticking
 
